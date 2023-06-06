@@ -123,9 +123,14 @@ class DataTransformation:
             save_object(file_path= self.data_transformation_config.preprocess_obj_file_path,
                         obj = preprocess_obj)
             
+            
+            logging.info("Data Transformation Completed")
+
+
             return(train_array,
                    test_array,
                    self.data_transformation_config.preprocess_obj_file_path)
+        
 
         except Exception as e:
             raise CustomException(e, sys)
